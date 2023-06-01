@@ -3,27 +3,74 @@
 *{
   color: inherit;
 }
-/* 바디 선택자 */
+/* 태그 선택자 */
 body {
   font-family: "SUIT";
-  margin-bottom: 500px;
   font-weight: 300;
   background-color:white;
   color: black
 }
+
+/* 가상 요소 선택자 */
+/* selection 이라는 행동을하면 나타남 */
+::selection {
+  background: #373e6a;
+  color: #fff;
+}
+
+/* 가상으로 문자를 넣어줌(가짜, 셀렉안됨) */
+.align::before {
+  content: "이전 요소";
+ }
+
+ .align::after {
+  content: "다음 요소";
+ }
+
 /* 클래스 선택자 */
 .fancy {
   font-weight: bold;
   text-shadow: 4px 4px 3px #77f;
 }
 
+.align {
+  text-align: center;
+}
+
 ul.menu{
 	margin: 0;
   padding-left: 0;
-  color: red;
+  color: pink;
 }
 
 /* 아이디 선택자 */
 #demo {
   border: red 2px solid;
 }
+
+/* 속성 선택자 */
+.menu a[href$=".html"] {
+  background-color: red;
+}
+
+/* 선택자 목록 */
+.fancy, .menu {
+  font-size: 24px;
+}
+
+/* 가상 클래스 */
+.menu li:nth-child(-n+22),
+.menu li:nth-child(odd){
+  color: yellow;
+}
+
+.menu a:hover {
+  border: 5px solid orange;
+} 
+
+h1 .menu a:hover,
+h1 .menu a:focus {
+  background-color: orange;
+}
+
+
