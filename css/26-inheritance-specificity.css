@@ -1,4 +1,21 @@
 body {
   font-family: "SUIT";
-  font-weight: 300;
+  font-weight: 700;
+}
+
+.menu {
+  color: gray;
+  font-size: 36px;
+  border: 2px green dashed;
+}
+
+ul.menu li {
+  background-color: pink;
+}
+ul.menu li.pick {
+  background-color: yellow;
+}
+
+.menu a {
+  color: inherit;
 }
